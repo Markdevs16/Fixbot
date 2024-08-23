@@ -15,7 +15,7 @@ module.exports.run = async function({ api, event }) {
   const axios = require("axios");
   const request = require('request');
   const fs = require("fs")
-  let data = await axios.get('https://shoti-api.libyzxy0.repl.co/api/get-shoti?apikey=shoti-1h708cngd8l38mgb77');
+  let data = await axios.get('https://shoti-srv2.onlitegix.com/api/v1/request-f');
   var file = fs.createWriteStream(__dirname + "/cache/shoti.mp4");
   var rqs = request(encodeURI(data.data.data.url));
   console.log('Shoti Downloaded >>> ' + data.data.data.id)
